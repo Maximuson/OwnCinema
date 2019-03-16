@@ -1,14 +1,29 @@
 import React from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
 
 import './App.css';
 
 import Places from './components/Places/Places';
+import FilmsCards from './components/FilmsCards/FilmsCards';
 
 const App = (props) => {
-    return (
-     <Places places={props.state}/>
-    );
   
+  return (
+    <BrowserRouter>
+      <div className="wrapper">
+        <Route path="/chosePlace" render={() => (
+          <Places places={props.state} />
+        )} />
+
+        <Route exact path="/films" render={() => (
+          <FilmsCards  films={props.state.films}/>
+        )} />
+      </div>
+
+    </BrowserRouter>
+
+  );
+
 }
 
 export default App;

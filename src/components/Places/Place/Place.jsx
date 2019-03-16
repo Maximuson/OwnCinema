@@ -1,24 +1,26 @@
 import React from 'react';
-import '../Places.css';
+import s from '../Places.module.css';
 
 
 const Place = (props) => {
     let clas;
-
-    function infoMe(){
-        alert(props.place.placeNum)
+    
+//по клику на ячейку бронируем место(изменяем свойство isBrone в главном state)
+    function brone(){
+        console.log(props.place.placeNum)
+        props.place.isBrone = true;
     }
      
     if(props.place.isBrone) {
-        clas = 'brone'
+        clas = s.brone
     }
     else{
-        clas = 'list-item'
+        clas = s.listItem
     }
     return (
         <li>
-            <div onClick={infoMe} className={clas}>
-                <strong className='placeNum'>{props.place.placeNum}</strong>            
+            <div onClick={brone} className={clas}>
+                <strong className={s.placeNum}>{props.place.placeNum}</strong>            
             </div>
         </li>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Places.css';
+import s from './Places.module.css';
 import Place from './Place/Place';
 
 
@@ -7,18 +7,20 @@ import Place from './Place/Place';
 const Places = (props) => {
     
  
-    let elements = props.places.places.map(e => {      
-       return <Place place={e}  />
-    });
+ let elements = props.places.places.map(e => {      
+    return <Place place={e}  />
+ });
+
+    // let elements = props.places.map(e => {  
+          
+    //     return <Place place={e}  />
+    //  });
  
     return (
-        <div>
-        
-            <a className='list-item screen' href=''>
+        <div className={s.wrapper}>
+            <a className={[s.listItem, s.screen].join(' ') } href=''>
                 <strong>Films</strong>
-            </a>
-        
-       
+            </a>     
             <ul>
                 {elements}
             </ul>

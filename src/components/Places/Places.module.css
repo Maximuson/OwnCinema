@@ -36,7 +36,10 @@ body {
 }
 
 ul {
+  left: 19%;
+  top: 16vh;
   position: relative;
+  width: 50%;
   -webkit-transform: rotate(-35deg) skew(20deg, 5deg);
           transform: rotate(-35deg) skew(20deg, 5deg);
   list-style-type: none;
@@ -46,7 +49,7 @@ ul {
   grid-column-gap: 15px;
 }
 
-.list-item,
+.listItem,
 .brone  {
   display: flex;
   justify-content: center;
@@ -63,14 +66,14 @@ ul {
   text-decoration: none;
   transition: all .25s linear;
 }
-.list-item{
+.listItem{
   cursor: pointer;
 }
 .brone{
   background: #ff6e42;
   color: #fffcfb;
 }
-.list-item:hover{
+.listItem:hover{
   background: #ff6e42;
   color: #fffcfb;
   -webkit-transform: translate(0.9em, -0.9em);
@@ -78,24 +81,24 @@ ul {
   transition: all .25s linear;
   z-index: 10;
 }
-.list-item:hover:before, .list-item:hover:after {
+.listItem:hover:before, .listItem:hover:after {
   transition: all .25s linear;
 }
-.list-item:hover:before {
+.listItem:hover:before {
   background: #b65234;
   width: 1em;
   top: .5em;
   left: -1em;
 }
-.list-item:hover:after {
+.listItem:hover:after {
   background: #b65234;
   width: 1em;
   bottom: -2.5em;
   left: 1em;
   height: 4em;
 }
-.list-item:before,
-.list-item:after,
+.listItem:before,
+.listItem:after,
 .brone::before,
 .brone::after {
   content: '';
@@ -103,7 +106,7 @@ ul {
   transition: all .25s linear;
   width: .5em;
 }
-.list-item:after,
+.listItem:after,
 .brone::after {
   height: 4em;
   background: #181818;
@@ -112,7 +115,7 @@ ul {
   -webkit-transform: rotate(90deg) skew(0, 45deg);
           transform: rotate(90deg) skew(0, 45deg);
 }
-.list-item:before,
+.listItem:before,
 .brone::before {
   height: 2.5em;
   background: #121212;
@@ -145,7 +148,7 @@ ul {
     bottom: -6.8em;
     left: 6em;
 }
-.list-item.screen:hover{
+.listItem.screen:hover{
   transform: none;
 }
 .placeNum{
@@ -158,4 +161,6 @@ ul {
   text-align: center;
   font-size: 39px;
 
+}
+.wrapper{
 }
