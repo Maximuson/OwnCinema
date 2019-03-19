@@ -35,7 +35,7 @@ body {
   background: #f2f2f2;
 }
 
-ul {
+.ulPlaces {
   left: 19%;
   top: 16vh;
   position: relative;
@@ -70,7 +70,7 @@ ul {
   cursor: pointer;
 }
 .brone{
-  background: #ff6e42;
+  background: #FF222E;
   color: #fffcfb;
 }
 .listItem:hover{
@@ -124,10 +124,12 @@ ul {
   -webkit-transform: skewY(-45deg);
           transform: skewY(-45deg);
 }
+
 .brone::after,
 .brone::before{
- background:  #ff6e42;
+ background:  #FF222E;
 }
+
 .screen{
   position: absolute;
   left: 10%;

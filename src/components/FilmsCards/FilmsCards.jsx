@@ -6,7 +6,7 @@ import Card from './Card/Card';
 
 const FilmsCards = (props) =>{
     let items = props.films.map(i=>{
-        return <Card  film={i} />
+        return <Card state={props.state} film={i} />
     })
     return(
         <div className={s.wrapper}>

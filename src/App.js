@@ -16,7 +16,7 @@ const App = (props) => {
         )} />
 
         <Route exact path="/films" render={() => (
-          <FilmsCards  films={props.state.films}/>
+          <FilmsCards state={props.state} films={props.state.films}/>
         )} />
       </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './Places.module.css';
 import Place from './Place/Place';
+import ChooseBrone from './ChooseBrone/ChooseBrone';
 
 
 
@@ -20,10 +21,12 @@ const Places = (props) => {
         <div className={s.wrapper}>
             <a className={[s.listItem, s.screen].join(' ') } href=''>
                 <strong>Films</strong>
-            </a>     
-            <ul>
+            </a>
+
+            <ul className={s.ulPlaces}>
                 {elements}
             </ul>
+            <ChooseBrone />
         </div>
     )
 
