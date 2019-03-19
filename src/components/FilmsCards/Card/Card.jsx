@@ -24,8 +24,8 @@ const Card = (props) => {
 
         <div className={s.wrapper}>
             <img className={s.img} />
-            <NavLink  className={s.title} to={`/chosePlace`}>
-                <strong onClick={changeFilm1}>
+            <NavLink  onClick={changeFilm1} className={s.title} to={`/chosePlace`}>
+                <strong>
                     {props.film.name}
                 </strong> </NavLink>
             <div className={s.time}>

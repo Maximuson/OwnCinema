@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, NavLink } from "react-router-dom";
 
 import './App.css';
 
@@ -18,6 +18,7 @@ const App = (props) => {
         <Route exact path="/films" render={() => (
           <FilmsCards state={props.state} films={props.state.films}/>
         )} />
+  <NavLink to="/films">Films </NavLink>
       </div>
 
     </BrowserRouter>

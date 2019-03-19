@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Places.module.css';
 import Place from './Place/Place';
-import ChooseBrone from './ChooseBrone/ChooseBrone';
+import ListBrone from './ListBrone/ListBrone';
 
 
 
@@ -26,7 +26,7 @@ const Places = (props) => {
             <ul className={s.ulPlaces}>
                 {elements}
             </ul>
-            <ChooseBrone />
+            <ListBrone places={props.places}/>
         </div>
     )
 

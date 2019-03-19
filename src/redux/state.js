@@ -3,6 +3,7 @@ let rerenderEntireTree = () => {
 }
 
 let state = {
+    brone:[ 1],
     places: [
         { placeNum: 1, isBrone: false },
         { placeNum: 10, isBrone: false },
@@ -182,12 +183,18 @@ let state = {
 };
 export function changeFilm(placesFilm) {
     state.places = placesFilm
+    rerenderEntireTree(state)
 };
 
 
 export function brone(props) {
     console.log(props.place.placeNum)
-    props.place.isBrone = !props.place.isBrone;
+    //props.place.isBrone = !props.place.isBrone;
+    if (!props.place.isBrone && !state.brone.includes(props.place.placeNum)) {
+      
+        state.brone.push(props.place.placeNum)
+    }
+    
     rerenderEntireTree(state)
 }
 window.state = state;
@@ -208,6 +215,7 @@ export function broneManyPlaces(nums) {
             } 
         })
     });
+    state.brone = []
     rerenderEntireTree(state)
 }
 window.broneManyPlaces = broneManyPlaces
